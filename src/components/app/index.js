@@ -3,6 +3,8 @@ import ReactDom from "react-dom";
 import { connect } from "react-redux";
 import { WindowResizeListener } from 'react-window-resize-listener';
 
+import serverConfig from "./../../config/server";
+
 import Logo from "./../logo";
 import List from "./../list";
 import Detail from "./../detail";
@@ -39,7 +41,9 @@ export default class App extends React.Component {
       document.querySelector('#post-list').scrollLeft += 1;
     }.bind(this), 100);
   }
-
+  moveToEarthSite(event) {
+    window.location = serverConfig.uEarthSite;
+  }
   render() {
     let topActive = "";
     if (this.props.data.selectedPost != null) {
@@ -58,6 +62,10 @@ export default class App extends React.Component {
         <Copyright />
         <div className={"loader" + loaderActive}>
           <img src="./loader.jpg" />
+        </div>
+        <div className="earth" onClick={this.moveToEarthSite.bind(this)}>
+          <img className="icon" src="./whale_earth_icon.png" />
+          <img src="./whale_earth_text.png" />
         </div>
       </div>
     );

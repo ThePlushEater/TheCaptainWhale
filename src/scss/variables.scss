@@ -17,16 +17,14 @@ $color-sea: #2d4860;
 $color-white: #f2f2f2;
 $color-fishing: #211e34;
 
-// @keyframes spin {
-//   0% { transform: rotate(0deg); }
-//   10% { transform: rotate(0deg); }
-//   20% { transform: rotate(-5deg); }
-//   80% { transform: rotate(725deg); }
-// 	90% { transform: rotate(720deg); }
-//   100% { transform: rotate(720deg); }
-// }
-//
-// @keyframes loading {
-//   0% { transform: rotate(0deg); }
-//   100% { transform: rotate(720deg); }
-// }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  5% { transform: rotate(0deg); }
+	95% { transform: rotate(720deg); }
+  100% { transform: rotate(720deg); }
+}
+
+@keyframes loading {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(720deg); }
+}
