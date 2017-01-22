@@ -60,12 +60,12 @@ export default class App extends React.Component {
         <Logo />
         <List/>
         <Copyright />
-        <div className={"loader" + loaderActive}>
-          <img src="./loader.jpg" />
-        </div>
         <div className="earth" onClick={this.moveToEarthSite.bind(this)}>
           <img className="icon" src="./whale_earth_icon.png" />
           <img src="./whale_earth_text.png" />
+        </div>
+        <div className={"loader" + loaderActive}>
+          <img src="./loader.jpg" />
         </div>
       </div>
     );
