@@ -1,0 +1,32 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.app > .list {
+  position: relative;
+  height: 50%;
+  padding-top: 80px;
+  padding-bottom: 24px;
+
+  background-position: left 0 center;
+  background-image: url(./texture.png);
+  background-repeat: repeat;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-direction: column;
+          flex-direction: column;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  @include respond-to(portrait) {
+    font-size: $font-medium;
+  }
+  @include respond-to(landscape) {
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,82 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.list > .flow {
+  position: relative;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-flex-direction: row;
+          flex-direction: row;
+
+  height: 33.33%;
+
+  > svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    > .line {
+      stroke-width: 10;
+      @include respond-to(portrait) {
+        stroke-width: 3;
+      }
+      @include respond-to(landscape) {
+        stroke-width: 6;
+      }
+    }
+  }
+
+  > .header {
+    width: 80px;
+    height: 100%;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+       -moz-user-select: none;  /* Firefox all */
+        -ms-user-select: none;  /* IE 10+ */
+            user-select: none;  /* Likely future */
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    letter-spacing: 1px;
+    color: $color-white;
+    font-weight: 700;
+    font-style: italic;
+    font-size: $font-medium-large;
+    text-transform: capitalize;
+
+    @include respond-to(portrait) {
+      font-size: $font-medium;
+    }
+    @include respond-to(landscape) {
+      font-size: $font-medium;
+    }
+
+    > .wrapper {
+      margin: auto;
+      > div {
+        -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+            -ms-transform: rotate(90deg); /* IE 9 */
+                transform: rotate(90deg);
+      }
+    }
+  }
+
+  > .body {
+    height: 100%;
+    position: relative;
+  }
+}

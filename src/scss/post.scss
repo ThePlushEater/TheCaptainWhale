@@ -1,0 +1,75 @@
+@import "./mixin.scss";
+
+.post {
+  .alignleft {
+    float: left;
+    margin: 0.375em 1.75em 1.75em 0;
+  }
+  .alignright {
+    float: right;
+    margin-left: 1.5em;
+  }
+
+  p {
+    line-height: 1.5;
+    margin: 0 4px 1.25em 4px;
+
+    > iframe {
+      max-width: 90%;
+      @include respond-to(portrait) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  embed, iframe, object, video {
+    margin-bottom: 1.75em;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  p > embed, p > iframe, p > object, p > video {
+    margin-bottom: 0;
+  }
+
+  img {
+    height: auto;
+    vertical-align: middle;
+    &:not(.alignright) {
+      width: 100%;
+    }
+    max-width: 525px;
+  }
+
+  video {
+    height: auto;
+    max-width: 100%;
+  }
+
+  a {
+    color: #000000;
+    target-name: new;
+    target-new: tab;
+
+    text-decoration: none;
+
+    cursor: pointer;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 1);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 1);
+    &:hover {
+      -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 1), 0 2px 0 rgba(0, 0, 0, 1);
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 1), 0 2px 0 rgba(0, 0, 0, 1);
+    }
+  }
+
+  h1 {
+    font-weight: 900;
+    font-style: italic;
+  }
+  h1, h2, h3 {
+    margin: 0 4px 0.5em 4px;
+    line-height: 1.25;
+    font-weight: 700;
+    font-style: italic;
+  }
+}

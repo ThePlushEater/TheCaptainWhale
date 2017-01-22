@@ -1,0 +1,40 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.detail > .timeline {
+  height: 15%;
+  position: relative;
+  font-family: $font-normal;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(225,225,225,0.5), -1px -1px 1px rgba(50,50,50,0.25);
+  color: $color-fishing;
+  font-style: italic;
+  font-size: $font-medium-small;
+
+  @include respond-to(portrait) {
+    height: 10%;
+    font-size: $font-medium-small;
+  }
+  @include respond-to(landscape) {
+    font-size: $font-medium-small;
+  }
+  @include respond-to(wide) {
+    font-size: $font-medium;
+  }
+  > .time {
+    position: absolute;
+    bottom: 4px;
+    @include respond-to(portrait) {
+      bottom: 1px;
+    }
+    @include respond-to(landscape) {
+
+    }
+    @include respond-to(wide) {
+      bottom: 8px;
+    }
+    // -webkit-transition: left 0.1s; /* Safari */
+    //    -moz-transition: left 0.1s;
+    //         transition: left 0.1s;
+  }
+}

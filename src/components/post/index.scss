@@ -1,0 +1,69 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.detail > .post {
+  height: 85%;
+  padding: 24px 16px 0 16px;
+  @include respond-to(portrait) {
+    height: 90%;
+    padding: 8px;
+  }
+  @include respond-to(landscape) {
+
+  }
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  > .wrapper {
+    max-width: 100%;
+    margin: auto;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+            flex-direction: row;
+
+    > .left {
+      // -webkit-flex-grow: 1;
+      //         flex-grow: 1;
+      -webkit-flex-shrink: 0;
+              flex-shrink: 0;
+
+      width: 320px;
+      border-right: 10px solid $color-fishing;
+      padding: 8px 16px;
+      height: 100%;
+      overflow: hidden;
+      @include respond-to(portrait) {
+        display: none;
+      }
+      @include respond-to(landscape) {
+
+      }
+    }
+    > .right {
+      -webkit-flex-grow: 2;
+              flex-grow: 2;
+      height: 100%;
+      height: calc(100% - 32px);
+      max-width: 960px;
+      padding: 8px 16px;
+      margin: 16px 0;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      > .body {
+        width: 100%;
+        padding-right: 8px;
+      }
+    }
+  }
+}

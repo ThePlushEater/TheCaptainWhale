@@ -1,0 +1,15 @@
+$portrait-max-width: 768px;
+$landscape-max-width: 768px;
+$wide-min-width: 1080px;
+
+@mixin respond-to($media) {
+  @if $media == portrait {
+    @media only screen and (max-aspect-ratio: 1/1) and (max-width: $portrait-max-width) { @content; }
+  }
+  @if $media == landscape {
+    @media only screen and (max-width: $landscape-max-width) { @content; }
+  }
+  @if $media == wide {
+    @media only screen and (min-width: $wide-min-width) { @content; }
+  }
+}

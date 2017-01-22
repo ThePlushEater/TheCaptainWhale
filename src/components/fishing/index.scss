@@ -1,0 +1,29 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+
+.list > svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  pointer-events: none;
+
+  > .graph {
+    stroke-width: 8;
+    stroke-dasharray: 16 8;
+  }
+
+  > .line {
+    stroke-width: 6;
+    @include respond-to(portrait) {
+      stroke-width: 3;
+    }
+    @include respond-to(landscape) {
+      stroke-width: 6;
+    }
+    @include respond-to(wide) {
+      stroke-width: 12;
+    }
+  }
+}

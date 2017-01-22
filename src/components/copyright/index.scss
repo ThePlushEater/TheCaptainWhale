@@ -1,0 +1,19 @@
+@import "./../../scss/variables.scss";
+@import "./../../scss/mixin.scss";
+
+.app > .copyright {
+  position: absolute;
+  font-size: $font-small;
+  bottom: 16px;
+  right: 0;
+  padding: 4px 8px;
+  color: $color-white;
+  font-family: $font-normal;
+
+  @include respond-to(portrait) {
+    bottom: 0;
+  }
+  @include respond-to(landscape) {
+    bottom: 0;
+  }
+}

@@ -1,0 +1,9 @@
+@import "./../../scss/variables.scss";
+
+.app > .detail {
+  height: 50%;
+  
+  background-position: left 0 center;
+  background-image: url(./texture.png);
+  background-repeat: repeat;
+}
