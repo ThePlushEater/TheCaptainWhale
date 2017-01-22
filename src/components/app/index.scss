@@ -16,7 +16,7 @@
           transition-delay: 1.5s;
 
   @include respond-to(portrait) {
-    height: 180%;
+    height: 175%;
   }
   @include respond-to(landscape) {
 
@@ -31,7 +31,7 @@
     -webkit-transition-delay: 0s; /* Safari */
             transition-delay: 0s;
     @include respond-to(portrait) {
-      top: -80%;
+      top: -75%;
       // top: -80vh;
     }
     @include respond-to(landscape) {
@@ -103,6 +103,10 @@
     top: 2px;
 
     cursor: pointer;
+
+    @include respond-to(portrait) {
+      height: 20px;
+    }
 
     > img {
       height: 100%;
