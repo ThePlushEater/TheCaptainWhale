@@ -59,7 +59,7 @@
     background-color: #ffffff;
     background-size: cover;
     background-position: center;
-    z-index: 1000;
+    z-index: 9999;
     -webkit-transition: left 0.25s, opacity 0.5s; /* Safari */
        -moz-transition: left 0.25s, opacity 0.5s;
             transition: left 0.25s, opacity 0.5s;
@@ -87,7 +87,7 @@
   }
 
   > .earth {
-    z-index: 500;
+    z-index: 1000;
     height: 24px;
     display: -webkit-box;
     display: -moz-box;
