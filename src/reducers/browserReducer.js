@@ -6,6 +6,7 @@ const defaultState = Immutable({
   scrollLeft: 0,
   router: null,
   route: "",
+  showInstructionAbout: true,
 });
 
 export default function reducer(state = defaultState, action) {
@@ -28,6 +29,9 @@ export default function reducer(state = defaultState, action) {
         }
         return state.merge({route: action.payload});
       }
+    }
+    case "SHOW_INSTRUCTION_ABOUT": {
+      return state.merge({showInstructionAbout: action.payload}); 
     }
   }
   return state;

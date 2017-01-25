@@ -59,9 +59,16 @@ export default class Logo extends React.Component {
           top: this.state.top,
         }} src="./instruction_detail_wide.png" />;
       } else {
-        instruction = <img ref="image" style={{
-          top: this.state.top,
-        }} src="./instruction_list_wide.png" />;
+        if (this.props.browser.showInstructionAbout) {
+          instruction = <img ref="image" style={{
+            top: this.state.top,
+          }} src="./instruction_about_wide.png" />;
+        } else {
+          instruction = <img ref="image" style={{
+            top: this.state.top,
+          }} src="./instruction_list_wide.png" />;
+        }
+
       }
     } else if (this.props.browser.windowSize[0] <= 414) {
       logo = <img ref="image" style={{
@@ -72,9 +79,16 @@ export default class Logo extends React.Component {
           top: this.state.top,
         }} src="./instruction_detail_portrait.png" />;
       } else {
-        instruction = <img ref="image" style={{
-          top: this.state.top,
-        }} src="./instruction_list_portrait.png" />;
+        if (this.props.browser.showInstructionAbout) {
+          instruction = <img ref="image" style={{
+            top: this.state.top,
+          }} src="./instruction_about_portrait.png" />;
+        } else {
+          instruction = <img ref="image" style={{
+            top: this.state.top,
+          }} src="./instruction_list_portrait.png" />;
+        }
+
       }
     } else {
       logo = <img ref="image" style={{
@@ -85,9 +99,15 @@ export default class Logo extends React.Component {
           top: this.state.top,
         }} src="./instruction_detail.png" />;
       } else {
-        instruction = <img ref="image" style={{
-          top: this.state.top,
-        }} src="./instruction_list.png" />;
+        if (this.props.browser.showInstructionAbout) {
+          instruction = <img ref="image" style={{
+            top: this.state.top,
+          }} src="./instruction_about.png" />;
+        } else {
+          instruction = <img ref="image" style={{
+            top: this.state.top,
+          }} src="./instruction_list.png" />;
+        }
       }
     }
 

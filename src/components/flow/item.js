@@ -38,6 +38,9 @@ export default class Item extends React.Component {
     }
   }
   handlePostClick(item, event) {
+    if (this.props.browser.showInstructionAbout) {
+      this.props.dispatch({type: "SHOW_INSTRUCTION_ABOUT", payload: false});
+    }
     this.props.dispatch({type: "PUSH_ROUTE", payload: item.title.rendered.toLowerCase().split(' ').join('-')});
   }
   render() {

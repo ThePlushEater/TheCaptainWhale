@@ -26,12 +26,15 @@
   -webkit-user-select: none;  /* Chrome all / Safari all */
      -moz-user-select: none;  /* Firefox all */
       -ms-user-select: none;  /* IE 10+ */
-          user-select: none;  /* Likely future */  
+          user-select: none;  /* Likely future */
 
   @include respond-to(portrait) {
     font-size: $font-medium;
   }
   @include respond-to(landscape) {
     padding-top: 40px;
+  }
+  @include respond-to(wide) {
+    font-size: $font-medium-large;
   }
 }

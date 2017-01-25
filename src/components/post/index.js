@@ -8,6 +8,7 @@ require('./index.scss');
   return {
     localization: store.localization,
     data: store.data,
+    browser: store.browser,
   }
 })
 export default class Post extends React.Component {
@@ -50,6 +51,10 @@ export default class Post extends React.Component {
       for (let i = 0; i < links.length; i++) {
         links[i].target = "_blank";
       }
+    }
+
+    if (this.props.browser.showInstructionAbout && this.props.data.selectedPost && this.props.data.selectedPost.acf.category == "about") {
+      this.props.dispatch({type: "SHOW_INSTRUCTION_ABOUT", payload: false});
     }
   }
   render() {
