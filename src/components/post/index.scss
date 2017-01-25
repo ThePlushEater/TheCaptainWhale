@@ -11,6 +11,9 @@
   @include respond-to(landscape) {
 
   }
+  @include respond-to(wide) {
+    font-size: $font-medium-large;
+  }
 
   display: -webkit-box;
   display: -moz-box;
