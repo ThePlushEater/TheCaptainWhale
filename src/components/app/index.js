@@ -36,10 +36,12 @@ export default class App extends React.Component {
 
   }
   handleWindowResize(nextWindowSize) {
-    this.props.dispatch({type: "SET_WINDOW_SIZE", payload: [nextWindowSize.windowWidth, nextWindowSize.windowHeight]});
-    setTimeout(function() {
-      document.querySelector('#post-list').scrollLeft += 1;
-    }.bind(this), 100);
+    if (this.props.data.selectedPost == null) {
+      this.props.dispatch({type: "SET_WINDOW_SIZE", payload: [nextWindowSize.windowWidth, nextWindowSize.windowHeight]});
+      setTimeout(function() {
+        document.querySelector('#post-list').scrollLeft += 1;
+      }.bind(this), 100);
+    }
   }
   moveToEarthSite(event) {
     window.location = serverConfig.uEarthSite;

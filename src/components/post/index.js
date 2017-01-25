@@ -39,8 +39,10 @@ export default class Post extends React.Component {
     if (iframes && iframes.length > 0) {
       for (let i = 0; i < iframes.length; i++) {
         iframes[i].width = Math.min(post.clientWidth, 525);
-        iframes[i].height = post.clientWidth * 9 / 16 + 32;
+        iframes[i].height = Math.min(post.clientWidth, 525) * 9 / 16 + 32;
         iframes[i].src += "&rel=0&showinfo=0";
+
+
       }
     }
     const links = post.querySelectorAll('a');

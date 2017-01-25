@@ -2,7 +2,7 @@
 @import "./../../scss/mixin.scss";
 
 .detail > .post {
-  height: 85%;
+  height: 82.4%;
   padding: 24px 16px 0 16px;
   @include respond-to(portrait) {
     height: 90%;
@@ -46,7 +46,7 @@
         display: none;
       }
       @include respond-to(landscape) {
-
+        display: none;
       }
     }
     > .right {
